@@ -2,6 +2,11 @@ import { pool } from './client';
 
 async function createDB() {
   try {
+    // Drop existing tables if they exist
+    await pool.query('DROP TABLE IF EXISTS time_record');
+    await pool.query('DROP TABLE IF EXISTS feedback');
+    await pool.query('DROP TABLE IF EXISTS temp_sessions');
+
     // Create tables in HauntedDB
     await pool.query(`
       CREATE TABLE IF NOT EXISTS time_record (
