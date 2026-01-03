@@ -110,6 +110,14 @@
 
       document.querySelector("#unity-loading-bar").style.display = "block";
 
+      // Globally disable ESC key for browser (game needs it)
+      document.addEventListener('keydown', function(e) {
+        if (e.keyCode === 27) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -120,18 +128,6 @@
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
-
-                // Prevent ESC from exiting fullscreen
-                document.addEventListener('keydown', function(e) {
-                  if (e.keyCode === 27 && document.fullscreenElement) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    // Re-enter fullscreen after a short delay
-                    setTimeout(() => {
-                      unityInstance.SetFullscreen(1);
-                    }, 10);
-                  }
-                }, true);
 
                 // Disable pointer lock to prevent browser prompt
                 document.addEventListener('pointerlockchange', function(e) {
