@@ -129,14 +129,6 @@
                   unityInstance.SetFullscreen(1);
                 };
 
-                // Disable pointer lock to prevent browser prompt
-                document.addEventListener('pointerlockchange', function(e) {
-                  document.exitPointerLock();
-                });
-                document.addEventListener('mozpointerlockchange', function(e) {
-                  document.exitPointerLock();
-                });
-
               }).catch((message) => {
                 alert(message);
               });
