@@ -33,33 +33,24 @@ export default function Home() {
 
           {/* Project Showcase */}
           <div className="mt-16 w-full">
-            <h2 className="text-3xl font-semibold text-white mb-8">Featured Games</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Game Card 1 */}
+            <h2 className="text-3xl font-semibold text-white mb-8">Other Pages</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+              {/* Feedback Card */}
               <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105">
                 <div className="w-full h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🎮</span>
+                  <span className="text-4xl">💬</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Game 1</h3>
-                <p className="text-gray-400">Innovative gameplay with engaging story.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Feedback</h3>
+                <p className="text-gray-400">Share your thoughts and suggestions.</p>
               </div>
 
-              {/* Game Card 2 */}
+              {/* Current Ranking Card */}
               <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                 <div className="w-full h-32 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🚀</span>
+                  <span className="text-4xl">🏆</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Game 2</h3>
-                <p className="text-gray-400">High-speed action and visual feast.</p>
-              </div>
-
-              {/* Game Card 3 */}
-              <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:scale-105">
-                <div className="w-full h-32 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🌟</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Game 3</h3>
-                <p className="text-gray-400">Deep strategy with endless possibilities.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Current Ranking</h3>
+                <p className="text-gray-400">Check your position on the leaderboard.</p>
               </div>
             </div>
           </div>
