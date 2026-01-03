@@ -2,20 +2,10 @@ import { pool } from './client';
 
 async function createDB() {
   try {
-    // Note: In NeonDB (managed PostgreSQL), you typically cannot create or drop databases
-    // as you don't have superuser privileges. This script assumes you have the necessary permissions.
-    // If it fails, you may need to create the database manually in the Neon console.
+    // Note: Assuming HauntedDB already exists. If not, create it manually in Neon console.
+    // Tables will be created in the HauntedDB database.
 
-    // Create database (may fail in Neon)
-    await pool.query('CREATE DATABASE "HauntedDB"');
-    console.log('Database "HauntedDB" created successfully');
-
-    // Note: After creating the database, you would need to reconnect to it.
-    // But since the pool is already connected to the specified database in the connection string,
-    // the tables will be created in the current database.
-    // To create in "HauntedDB", you would need to update the connection string and reconnect.
-
-    // Create tables in the current database
+    // Create tables in HauntedDB
     await pool.query(`
       CREATE TABLE IF NOT EXISTS time_record (
         email VARCHAR(255) UNIQUE NOT NULL,
@@ -23,7 +13,7 @@ async function createDB() {
         time TIMESTAMP NOT NULL
       );
     `);
-    console.log('Table "time_record" created');
+    console.log('Table "time_record" created in HauntedDB');
 
     await pool.query(`
       CREATE TABLE IF NOT EXISTS feedback (
@@ -31,10 +21,10 @@ async function createDB() {
         nickname VARCHAR(255) UNIQUE NOT NULL
       );
     `);
-    console.log('Table "feedback" created');
+    console.log('Table "feedback" created in HauntedDB');
 
   } catch (err) {
-    console.error('Error creating database/tables:', err);
+    console.error('Error creating tables:', err);
   } finally {
     await pool.end();
   }

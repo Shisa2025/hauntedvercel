@@ -2,23 +2,17 @@ import { pool } from './client';
 
 async function deleteDB() {
   try {
-    // Note: In NeonDB (managed PostgreSQL), you typically cannot drop databases
-    // as you don't have superuser privileges. This script assumes you have the necessary permissions.
-    // If it fails, you may need to drop the database manually in the Neon console.
-
-    // Drop tables first (if they exist)
+    // Drop tables from HauntedDB
     await pool.query('DROP TABLE IF EXISTS time_record');
-    console.log('Table "time_record" dropped');
+    console.log('Table "time_record" dropped from HauntedDB');
 
     await pool.query('DROP TABLE IF EXISTS feedback');
-    console.log('Table "feedback" dropped');
+    console.log('Table "feedback" dropped from HauntedDB');
 
-    // Drop database (may fail in Neon)
-    await pool.query('DROP DATABASE "HauntedDB"');
-    console.log('Database "HauntedDB" dropped successfully');
+    // Note: Not dropping the database to avoid permission issues in Neon
 
   } catch (err) {
-    console.error('Error dropping database/tables:', err);
+    console.error('Error dropping tables:', err);
   } finally {
     await pool.end();
   }
