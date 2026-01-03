@@ -14,29 +14,34 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center gap-8 text-center">
           {/* Title with glow effect */}
           <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse">
-            我的游戏开发成果展示
+            Welcome to SheepShake!
           </h1>
 
           <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-            探索我精心打造的游戏世界，这里有创新的玩法、震撼的视觉效果和扣人心弦的故事体验。
+            Discover my game development portfolio featuring innovative gameplay, stunning visuals, and captivating stories.
           </p>
 
-          {/* Start Button */}
-          <button className="mt-8 px-12 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out animate-bounce">
-            开始
-          </button>
+          {/* Buttons */}
+          <div className="flex gap-4 mt-8">
+            <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+              Start Game
+            </button>
+            <button className="px-8 py-3 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-bold text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+              More Info
+            </button>
+          </div>
 
           {/* Project Showcase */}
           <div className="mt-16 w-full">
-            <h2 className="text-3xl font-semibold text-white mb-8">精选游戏项目</h2>
+            <h2 className="text-3xl font-semibold text-white mb-8">Featured Games</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Game Card 1 */}
               <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105">
                 <div className="w-full h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-4xl">🎮</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">游戏1</h3>
-                <p className="text-gray-400">创新玩法，引人入胜的故事。</p>
+                <h3 className="text-xl font-bold text-white mb-2">Game 1</h3>
+                <p className="text-gray-400">Innovative gameplay with engaging story.</p>
               </div>
 
               {/* Game Card 2 */}
@@ -44,8 +49,8 @@ export default function Home() {
                 <div className="w-full h-32 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-4xl">🚀</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">游戏2</h3>
-                <p className="text-gray-400">高速动作，视觉盛宴。</p>
+                <h3 className="text-xl font-bold text-white mb-2">Game 2</h3>
+                <p className="text-gray-400">High-speed action and visual feast.</p>
               </div>
 
               {/* Game Card 3 */}
@@ -53,8 +58,8 @@ export default function Home() {
                 <div className="w-full h-32 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-4xl">🌟</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">游戏3</h3>
-                <p className="text-gray-400">策略深度，无限可能。</p>
+                <h3 className="text-xl font-bold text-white mb-2">Game 3</h3>
+                <p className="text-gray-400">Deep strategy with endless possibilities.</p>
               </div>
             </div>
           </div>
