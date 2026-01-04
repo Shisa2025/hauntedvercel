@@ -43,7 +43,7 @@ export default function GameRules() {
               <ol className="list-decimal list-inside space-y-3">
                 <li>
                   <span className="font-semibold text-white">Rule 1: The Stone Tablet</span><br />
-                  The direction the stone tablet is facing is the answer. Do not trust words alone. Direction is the truth.
+                  The direction the stone tablet is facing is the answer. Direction is the truth. (Sometimes there might be a little bit of deviation.)
                 </li>
                 <li>
                   <span className="font-semibold text-white">Rule 2: The Starting Room</span><br />
