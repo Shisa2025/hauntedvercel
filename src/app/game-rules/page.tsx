@@ -18,90 +18,43 @@ export default function GameRules() {
           Game Rules & Riddle Hints
         </h1>
 
-        {/* Game Rules Section */}
+        {/* Game Manual */}
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-6 text-purple-400">Game Rules</h2>
-          <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-            <div className="space-y-4 text-gray-300">
-              <p>
-                <strong className="text-white">Objective:</strong> Navigate through the haunted environment, solve puzzles, and reach the exit as quickly as possible.
-              </p>
-              <p>
-                <strong className="text-white">Controls:</strong> Use WASD or arrow keys to move, mouse to look around, and interact with objects using the E key.
-              </p>
-              <p>
-                <strong className="text-white">Scoring:</strong> Your clear time determines your ranking. Faster times get better positions on the leaderboard.
-              </p>
-              <p>
-                <strong className="text-white">Tips:</strong>
-              </p>
-              <ul className="list-disc list-inside ml-4 space-y-2">
-                <li>Pay attention to environmental clues and hidden messages</li>
-                <li>Some puzzles require careful observation of patterns</li>
-                <li>Don't rush - sometimes the solution is in the details</li>
-                <li>Listen for audio cues that might guide you</li>
-              </ul>
+          <h2 className="text-3xl font-semibold mb-6 text-purple-400">Game Manual</h2>
+          <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 space-y-6 text-gray-300">
+            <div>
+              <p className="text-lg text-white">Welcome.</p>
+              <p>In the darkness, rules matter more than courage.</p>
             </div>
-          </div>
-        </section>
 
-        {/* Riddle Hints Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-6 text-blue-400">Riddle Hints</h2>
-          <div className="space-y-6">
-            <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">The Whispering Walls</h3>
-              <p className="text-gray-300 mb-3">
-                <em>"What speaks without a mouth, hears without ears, and runs without legs?"</em>
-              </p>
-              <div className="text-sm text-gray-400">
-                <strong>Hint:</strong> Look for patterns in the architecture. Sometimes the answer is written on the walls themselves.
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold text-white">Basic Controls</h3>
+              <div className="grid gap-2 text-sm md:text-base">
+                <p><span className="font-semibold text-white">W / A / S / D</span> — Move</p>
+                <p><span className="font-semibold text-white">Shift (Hold)</span> — Sprint</p>
+                <p className="text-gray-400 text-sm">A yellow stamina bar is shown in the top-right corner. When stamina runs out, you can no longer sprint.</p>
+                <p><span className="font-semibold text-white">F</span> — Interact. When you look at an interactable object, an “F” prompt will appear. Press F to interact.</p>
+                <p><span className="font-semibold text-white">P</span> — Pause the game</p>
               </div>
             </div>
 
-            <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">The Mirror Maze</h3>
-              <p className="text-gray-300 mb-3">
-                <em>"I reflect what you show me, but I never speak the truth. What am I?"</em>
-              </p>
-              <div className="text-sm text-gray-400">
-                <strong>Hint:</strong> Reflections can be deceiving. Try interacting with the mirrors in different ways.
-              </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold text-white">Three Important Rules</h3>
+              <ol className="list-decimal list-inside space-y-3">
+                <li>
+                  <span className="font-semibold text-white">Rule 1: The Stone Tablet</span><br />
+                  The direction the stone tablet is facing is the answer. Do not trust words alone. Direction is the truth.
+                </li>
+                <li>
+                  <span className="font-semibold text-white">Rule 2: The Starting Room</span><br />
+                  In the very first room, do not leave anything behind. Some things will not wait for you to come back.
+                </li>
+                <li>
+                  <span className="font-semibold text-white">Rule 3: The Green-Glowing Object</span><br />
+                  When you obtain an object that emits a green glow, remember this phrase: “'E'liminate the darkness, 'G'et rid of it if not needed.”
+                </li>
+              </ol>
             </div>
-
-            <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">The Clock Tower</h3>
-              <p className="text-gray-300 mb-3">
-                <em>"I have hands but can't clap, a face but can't smile. What am I?"</em>
-              </p>
-              <div className="text-sm text-gray-400">
-                <strong>Hint:</strong> Time is of the essence. The clock might be telling you more than just the time.
-              </div>
-            </div>
-
-            <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">The Hidden Library</h3>
-              <p className="text-gray-300 mb-3">
-                <em>"I'm full of stories but never speak. I have pages but no hands. What am I?"</em>
-              </p>
-              <div className="text-sm text-gray-400">
-                <strong>Hint:</strong> Knowledge is power. Some books contain more than just words.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Tips */}
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-green-400">Additional Tips</h2>
-          <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-            <ul className="space-y-2 text-gray-300">
-              <li>• Take your time to explore every corner</li>
-              <li>• Some puzzles require multiple visits to the same area</li>
-              <li>• Audio cues can be as important as visual ones</li>
-              <li>• Don't be afraid to backtrack - the solution might be behind you</li>
-              <li>• The environment itself is part of the puzzle</li>
-            </ul>
           </div>
         </section>
       </div>
