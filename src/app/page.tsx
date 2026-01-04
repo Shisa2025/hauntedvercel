@@ -56,7 +56,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 bg-clip-text text-transparent animate-pulse mb-8">Other Pages</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {/* Feedback Card */}
-              <div className="bg-white/80 backdrop-blur-md rounded-xl p-6 border border-white shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-[#ffd4e3]/95 backdrop-blur-md rounded-xl p-6 border border-[#ffb6ce] shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
                 <Link href="/feedback">
                   <div className="cursor-pointer">
                     <div className="w-full h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg mb-4 flex items-center justify-center shadow-inner">
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
 
               {/* Ranking Card */}
-              <div className="bg-white/80 backdrop-blur-md rounded-xl p-6 border border-white shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-[#d9e9ff]/95 backdrop-blur-md rounded-xl p-6 border border-[#b6d3ff] shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
                 <Link href="/ranking">
                   <div className="cursor-pointer">
                     <div className="w-full h-32 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg mb-4 flex items-center justify-center shadow-inner">
@@ -82,7 +82,7 @@ export default function Home() {
               </div>
 
               {/* Game Rules Card */}
-              <div className="bg-white/80 backdrop-blur-md rounded-xl p-6 border border-white shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-[#dcf4e3]/95 backdrop-blur-md rounded-xl p-6 border border-[#bde9c9] shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
                 <Link href="/game-rules">
                   <div className="cursor-pointer">
                     <div className="w-full h-32 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg mb-4 flex items-center justify-center shadow-inner">
