@@ -25,7 +25,8 @@ export async function POST(request: NextRequest) {
     const sessionId = result.rows[0].id;
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const claimUrl = `${baseUrl}/upload-record?session=${sessionId}`;
+    // Pass clear time through the claim URL so the upload page can display it
+    const claimUrl = `${baseUrl}/upload-record?session=${sessionId}&time=${clearTime}`;
 
     return NextResponse.json({ claimUrl });
   } catch (err) {
