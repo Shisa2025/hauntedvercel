@@ -45,7 +45,7 @@ export default function Feedback() {
                   So here's the deal:
                 </p>
                 <p className="text-lg">
-                  Got feedback, bugs, or just wanna chat about sheep-shaking mechanics?
+                  Got feedback, bugs, or just wanna chat?
                 </p>
                 <p className="text-2xl font-bold mt-4">
                   Hit me up on Telegram! 📱
