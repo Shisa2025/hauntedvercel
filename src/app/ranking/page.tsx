@@ -36,11 +36,33 @@ export default async function RankingPage() {
         </p>
 
         {/* Prize Information */}
-        <div className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 rounded-xl p-5 mb-6 border-2 border-yellow-300 shadow-lg">
-          <p className="text-gray-900 font-bold mb-2 text-lg">🎁 Prize Information</p>
-          <p className="text-gray-900 text-base font-semibold">
-            <span className="bg-yellow-200 px-2 py-1 rounded font-bold">Deadline: January 31, 2026 at 00:00 (Midnight)</span> — The player ranked #1 at this time will receive a <span className="bg-yellow-200 px-2 py-1 rounded font-bold">$20 Grab Voucher</span> !
+        <div className="mb-6">
+          <p className="text-gray-100 font-bold mb-3 text-lg">🎁 Prize Information</p>
+          <p className="text-gray-200 text-sm mb-4">
+            <span className="font-semibold">Deadline: January 31, 2026 at 00:00 (Midnight)</span>
           </p>
+          <div className="grid gap-3">
+            {/* 1st Place - Gold */}
+            <div className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 rounded-xl p-4 border-2 border-yellow-300 shadow-lg">
+              <p className="text-gray-900 text-base font-bold">
+                🥇 <span className="font-bold">1st Place:</span> <span className="bg-yellow-200 px-2 py-1 rounded font-bold">$20 Grab Voucher</span>
+              </p>
+            </div>
+            
+            {/* 2nd Place - Silver */}
+            <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 rounded-xl p-4 border-2 border-gray-400 shadow-lg">
+              <p className="text-gray-900 text-base font-bold">
+                🥈 <span className="font-bold">2nd Place:</span> <span className="bg-white px-2 py-1 rounded font-bold">$10 Grab Voucher</span>
+              </p>
+            </div>
+            
+            {/* 3rd Place - Bronze */}
+            <div className="bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 rounded-xl p-4 border-2 border-orange-300 shadow-lg">
+              <p className="text-gray-900 text-base font-bold">
+                🥉 <span className="font-bold">3rd Place:</span> <span className="bg-orange-100 px-2 py-1 rounded font-bold">A Large Pack of Chinese Popular Snacks</span>
+              </p>
+            </div>
+          </div>
         </div>
 
         {rows.length === 0 ? (
@@ -58,17 +80,27 @@ export default async function RankingPage() {
                 className={`grid grid-cols-[60px_1fr_140px] px-4 py-4 items-center transition-colors ${
                   index === 0 
                     ? 'bg-gradient-to-r from-yellow-600/30 to-amber-600/30 border-l-4 border-yellow-400' 
+                    : index === 1
+                    ? 'bg-gradient-to-r from-gray-400/20 to-gray-300/20 border-l-4 border-gray-300'
+                    : index === 2
+                    ? 'bg-gradient-to-r from-orange-700/20 to-amber-700/20 border-l-4 border-orange-400'
                     : 'bg-gray-700/50 hover:bg-gray-600/50'
                 }`}
               >
-                <span className={`text-sm font-bold ${index === 0 ? 'text-yellow-300' : 'text-gray-300'}`}>
-                  {index === 0 ? '🏆' : '#'} {index + 1}
+                <span className={`text-sm font-bold ${
+                  index === 0 ? 'text-yellow-300' : index === 1 ? 'text-gray-300' : index === 2 ? 'text-orange-300' : 'text-gray-300'
+                }`}>
+                  {index === 0 ? '🏆' : index === 1 ? '🥈' : index === 2 ? '🥉' : '#'} {index + 1}
                 </span>
                 <div className="flex flex-col">
-                  <span className={`font-semibold text-base ${index === 0 ? 'text-yellow-200' : 'text-gray-100'}`}>{row.nickname}</span>
-                  <span className={`text-xs break-words ${index === 0 ? 'text-gray-300' : 'text-gray-400'}`}>{row.email}</span>
+                  <span className={`font-semibold text-base ${
+                    index === 0 ? 'text-yellow-200' : index === 1 ? 'text-gray-200' : index === 2 ? 'text-orange-200' : 'text-gray-100'
+                  }`}>{row.nickname}</span>
+                  <span className={`text-xs break-words ${index < 3 ? 'text-gray-300' : 'text-gray-400'}`}>{row.email}</span>
                 </div>
-                <span className={`text-right font-mono text-lg font-bold ${index === 0 ? 'text-yellow-300' : 'text-purple-200'}`}>{formatTime(row.time)}</span>
+                <span className={`text-right font-mono text-lg font-bold ${
+                  index === 0 ? 'text-yellow-300' : index === 1 ? 'text-gray-200' : index === 2 ? 'text-orange-300' : 'text-purple-200'
+                }`}>{formatTime(row.time)}</span>
               </div>
             ))}
           </div>
