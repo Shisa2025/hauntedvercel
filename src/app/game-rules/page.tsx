@@ -43,15 +43,18 @@ export default function GameRules() {
               <ol className="list-decimal list-inside space-y-3">
                 <li>
                   <span className="font-semibold text-white">Rule 1: The Stone Tablet</span><br />
-                  The direction the stone tablet is facing is the answer. Direction is the truth. (Sometimes there might be a little bit of deviation.)
+                  The stone tablet points the correct direction.
+Follow where it faces.
+(It doesn't have to be perfectly accurate.)
                 </li>
                 <li>
                   <span className="font-semibold text-white">Rule 2: The Starting Room</span><br />
-                  In the very first room, do not leave anything behind. Some things will not wait for you to come back.
+                  In the first room, make sure you pick up everything you see.
+You won't be able to return after progressing.
                 </li>
                 <li>
                   <span className="font-semibold text-white">Rule 3: The Green-Glowing Object</span><br />
-                  When you obtain an object that emits a green glow, remember this phrase: “'E'liminate the darkness, 'G'et rid of it if not needed.”
+                  When you obtain an object that emits a green glow, remember this phrase: “[E]liminate the darkness, [G]et rid of it if not needed.”
                 </li>
               </ol>
             </div>

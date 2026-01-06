@@ -39,7 +39,7 @@ export default async function RankingPage() {
         <div className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 rounded-xl p-5 mb-6 border-2 border-yellow-300 shadow-lg">
           <p className="text-gray-900 font-bold mb-2 text-lg">🎁 Prize Information</p>
           <p className="text-gray-900 text-base font-semibold">
-            <span className="bg-yellow-200 px-2 py-1 rounded font-bold">Deadline: January 31, 2026 at 00:00 (Midnight)</span> — The player ranked #1 at this time will receive a <span className="bg-yellow-200 px-2 py-1 rounded font-bold">$20 Grab Voucher</span>!
+            <span className="bg-yellow-200 px-2 py-1 rounded font-bold">Deadline: January 31, 2026 at 00:00 (Midnight)</span> — The player ranked #1 at this time will receive a <span className="bg-yellow-200 px-2 py-1 rounded font-bold">$20 Grab Voucher</span> !
           </p>
         </div>
 
