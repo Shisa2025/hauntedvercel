@@ -1,7 +1,13 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import GameRulesModal from "./components/GameRulesModal";
 
 export default function Home() {
+  const [showRulesModal, setShowRulesModal] = useState(false);
+
   const pixelGridStyle = {
     backgroundImage:
       "linear-gradient(rgba(255, 255, 255, 0.24) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.24) 1px, transparent 1px)",
@@ -39,17 +45,23 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-8">
-            <Link href="/start-game">
-              <button className="px-16 py-7 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-extrabold text-2xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                Start Game
-              </button>
-            </Link>
+            <button 
+              onClick={() => setShowRulesModal(true)}
+              className="px-16 py-7 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-extrabold text-2xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+            >
+              Start Game
+            </button>
             <Link href="/more-info">
               <button className="px-16 py-7 bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 text-white font-extrabold text-2xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
                 More Info
               </button>
             </Link>
           </div>
+
+          {/* Rules Modal */}
+          {showRulesModal && (
+            <GameRulesModal onClose={() => setShowRulesModal(false)} />
+          )}
 
           {/* Project Showcase */}
           <div className="mt-16 w-full">

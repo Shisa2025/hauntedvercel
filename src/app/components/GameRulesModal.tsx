@@ -1,0 +1,89 @@
+'use client';
+
+import Link from "next/link";
+
+interface GameRulesModalProps {
+  onClose: () => void;
+}
+
+export default function GameRulesModal({ onClose }: GameRulesModalProps) {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4 max-h-screen overflow-y-auto">
+      <div className="bg-gray-800 bg-opacity-95 backdrop-blur-sm rounded-xl p-8 border border-gray-700 max-w-4xl w-full my-8 max-h-[90vh] overflow-y-auto">
+        {/* Title */}
+        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent text-center">
+          Game Rules & Riddle Hints
+        </h1>
+
+        {/* Game Manual */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold mb-6 text-purple-400">Game Manual</h2>
+          <div className="space-y-6 text-gray-300">
+            <div>
+              <p className="text-lg text-white">Welcome.</p>
+              <p>In the darkness, rules matter more than courage.</p>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold text-white">Basic Controls</h3>
+              <div className="grid gap-3 text-sm md:text-base space-y-2 bg-gray-900 bg-opacity-50 p-4 rounded-lg border border-gray-700">
+                <div className="flex items-start gap-3">
+                  <span className="font-semibold text-white min-w-fit">W / A / S / D</span>
+                  <span>— Move</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="font-semibold text-white min-w-fit">Shift (Hold)</span>
+                  <span>— Sprint</span>
+                </div>
+                <div className="text-gray-400 text-sm">
+                  <p>A yellow stamina bar is shown in the top-right corner. When stamina runs out, you can no longer sprint.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="font-semibold text-white min-w-fit">F</span>
+                  <span>— Interact. When you look at an interactable object, an "F" prompt will appear. Press F to interact.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="font-semibold text-white min-w-fit">P</span>
+                  <span>— Pause the game</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold text-white">Three Important Rules</h3>
+              <ol className="list-decimal list-inside space-y-4 bg-gray-900 bg-opacity-50 p-4 rounded-lg border border-gray-700">
+                <li>
+                  <span className="font-semibold text-white">Rule 1: The Stone Tablet</span><br />
+                  <span className="text-gray-300">The direction the stone tablet is facing is the answer. Direction is the truth. (Sometimes there might be a little bit of deviation.)</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-white">Rule 2: The Starting Room</span><br />
+                  <span className="text-gray-300">In the very first room, do not leave anything behind. Some things will not wait for you to come back.</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-white">Rule 3: The Green-Glowing Object</span><br />
+                  <span className="text-gray-300">When you obtain an object that emits a green glow, remember this phrase: "'E'liminate the darkness, 'G'et rid of it if not needed."</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Buttons */}
+        <div className="flex gap-4 justify-center mt-8">
+          <button
+            onClick={onClose}
+            className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors duration-300"
+          >
+            Close
+          </button>
+          <Link href="/start-game">
+            <button className="px-12 py-3 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Game
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
